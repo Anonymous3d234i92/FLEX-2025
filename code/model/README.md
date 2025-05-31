@@ -9,8 +9,12 @@
 
    * Make sure you have Python installed, then install the required Python packages:
 
-     ```torch accelerate deepspeed peft
      ```
+     torch accelerate deepspeed peft
+     ```
+   * **MLIR Requirement:**
+     FLEX requires a working MLIR installation (with `mlir-opt` and related tools) to compile and test generated programs.
+     Please ensure MLIR is properly installed and available in your system path before running experiments. You may need to configure MLIR in the parent directory or according to your environment.
 
 3. **Merge Model Files**
 
