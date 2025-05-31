@@ -1,6 +1,5 @@
-# FLEX: Interleaved Learning and Exploration
+# FLEX: Interleaved Learning and Exploration: A Self-Adaptive Fuzz Testing Framework for MLIR
 
-*A Self-Adaptive Fuzz Testing Framework for MLIR*
 
 ## Overview
 
