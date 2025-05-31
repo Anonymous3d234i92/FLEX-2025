@@ -27,7 +27,7 @@ We evaluate FLEX on the upstream MLIR compiler against four state-of-the-art fuz
   * **exp\_srcipt/**: Scripts to run and manage MLIR compilation and testing.
   * **model/**: Main code for test program generation and running experiments.
     *To run FLEX, start from this directory.*
-* **data/**: Contains all experiment results and bug data.
+* **data/**: Contains the bug data.
 
   * Each subdirectory (e.g., `Discussion/`, `RQ2/`, `RQ3/`) contains a `bugs.json` file, which is a dictionary mapping each discovered bug to its corresponding triggering stack trace.
 
