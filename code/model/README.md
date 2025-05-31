@@ -9,8 +9,7 @@
 
    * Make sure you have Python installed, then install the required Python packages:
 
-     ```torch accelerate deepspeed peft
-     ```
+   torch accelerate deepspeed peft
 
 3. **Merge Model Files**
 
