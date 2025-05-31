@@ -43,7 +43,7 @@ def load_model(model, dirs = 'model/'):
 
 start_time = time.time()
 num_epochs = 1000
-batch_size = 14
+batch_size = 7
 
 # Initialize the Accelerator
 accelerator = Accelerator(mixed_precision="bf16")
@@ -88,19 +88,18 @@ f = open(f"./generated{int(accelerator.process_index)}.txt", "w")
 model.eval()
 val_loss = 0
 countt = 0
-#    accelerator.load_state(f"checkpoint_epoch_{epoch + 1}.pt")
 for batch in tqdm(eval_loader):
     countt += 1
     elapsed_time = time.time() - start_time
-    if elapsed_time >= 24 * 60 * 60:
-        print("Reached maximum runtime of 24 hours. Stopping execution.")
-        print ("time")
-        print (time.time() - start_time)
-        f.close()
-        exit()
-        break
-#    if countt >= 2500:
-#        break
+    # if elapsed_time >= 24 * 60 * 60:
+    #     print("Reached maximum runtime of 24 hours. Stopping execution.")
+    #     print ("time")
+    #     print (time.time() - start_time)
+    #     f.close()
+    #     exit()
+    #     break
+   if countt >= 5000:
+       break
     inputs = batch['input_ids'].to(accelerator.device).long()
     attention_mask = batch['attention_mask'].to(accelerator.device)
 

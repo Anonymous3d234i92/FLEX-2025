@@ -27,7 +27,7 @@ def load_model(model, dirs = 'model/'):
     model.load_state_dict(torch.load(dirs + 'best_model.ckpt', map_location='cpu'))
 
 
-num_epochs = 1
+num_epochs = 5
 batch_size = 3
 
 # Initialize the Accelerator
@@ -87,6 +87,4 @@ for epoch in range(num_epochs):
 
     print (1)
     # Save model checkpoint
-    if True: #(epoch + 1) % 100 == 0:
-        save_model(accelerator.unwrap_model(model))
-        #accelerator.save_state(f"checkpoint_epoch_{epoch + 1}.pt")
+    save_model(accelerator.unwrap_model(model))
