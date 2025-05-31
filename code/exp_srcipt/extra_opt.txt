@@ -1,0 +1,2 @@
+-ensure-debug-info-scope-on-llvm-func
+-remove-dead-values
